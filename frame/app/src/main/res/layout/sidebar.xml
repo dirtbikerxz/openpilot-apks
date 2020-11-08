@@ -166,7 +166,7 @@
                 android:minHeight="32dp"
                 android:paddingTop="4dp"
                 android:paddingBottom="4dp"
-                android:text="NO PANDA"
+                android:text="NO CAR"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textStyle="bold"

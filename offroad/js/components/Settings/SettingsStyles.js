@@ -32,7 +32,7 @@ export default StyleSheet.create({
     borderRightColor: 'rgba(233,233,233,.05)',
     display: 'flex',
     height: '100%',
-    width: '25%',
+    width: '33.3%',
   },
   settingsMenuItemBorderless: {
     borderRightWidth: 0,
@@ -56,7 +56,7 @@ export default StyleSheet.create({
   settingsMenuItemContext: {
     alignItems: 'center',
     display: 'flex',
-    paddingBottom: 20,
+    paddingBottom: 3,
   },
   settingsSpeedLimitOffset: {
     alignItems: 'center',

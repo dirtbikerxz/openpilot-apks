@@ -281,249 +281,250 @@ class Home extends Component {
                                 </X.Text>
                             </View>
                         </View>
-                    ) : (
-                    //   <View style={ homeBodyStyles }>
-                    //       <View style={ [Styles.homeBodyStats, !isPaired && Styles.homeBodyStatsUnpaired ] }>
-                    //           <View style={ Styles.homeBodyStatsHeader }>
-                    //               <X.Text
-                    //                   color='white'
-                    //                   size='tiny'
-                    //                   weight='semibold'>
-                    //                   PAST WEEK
-                    //               </X.Text>
-                    //           </View>
-                    //           <View style={ Styles.homeBodyStatsRow }>
-                    //               <View style={ Styles.homeBodyStat }>
-                    //                   <X.Text
-                    //                       color='white'
-                    //                       size='big'
-                    //                       weight='semibold'
-                    //                       style={ Styles.homeBodyStatNumber }>
-                    //                       { hasDeviceStats ? formatCommas(deviceStats.week.routes) : '0' }
-                    //                   </X.Text>
-                    //                   <X.Text
-                    //                       color='lightGrey700'
-                    //                       size='tiny'
-                    //                       style={ Styles.homeBodyStatLabel }>
-                    //                       DRIVES
-                    //                   </X.Text>
-                    //               </View>
-                    //               <View style={ Styles.homeBodyStat }>
-                    //                   <X.Text
-                    //                       color='white'
-                    //                       size='big'
-                    //                       weight='semibold'
-                    //                       style={ Styles.homeBodyStatNumber }>
-                    //                       { hasDeviceStats ? formatCommas(Math.floor(
-                    //                             isMetric ? mToKm(deviceStats.week.distance): deviceStats.week.distance
-                    //                         )) : '0' }
-                    //                   </X.Text>
-                    //                   <X.Text
-                    //                       color='lightGrey700'
-                    //                       size='tiny'
-                    //                       style={ Styles.homeBodyStatLabel }>
-                    //                       { isMetric ? 'KM' : 'MILES' }
-                    //                   </X.Text>
-                    //               </View>
-                    //               <View style={ Styles.homeBodyStat }>
-                    //                   <X.Text
-                    //                       color='white'
-                    //                       size='big'
-                    //                       weight='semibold'
-                    //                       style={ Styles.homeBodyStatNumber }>
-                    //                       { hasDeviceStats ? formatCommas(Math.floor(deviceStats.week.minutes / 60)) : '0' }
-                    //                   </X.Text>
-                    //                   <X.Text
-                    //                       color='lightGrey700'
-                    //                       size='tiny'
-                    //                       style={ Styles.homeBodyStatLabel }>
-                    //                       HOURS
-                    //                   </X.Text>
-                    //               </View>
-                    //           </View>
-                    //           <X.Line
-                    //               color='light'
-                    //               spacing='none' />
-                    //           <View style={ Styles.homeBodyStatsHeader }>
-                    //               <X.Text
-                    //                   color='white'
-                    //                   size='tiny'
-                    //                   weight='semibold'>
-                    //                   ALL TIME
-                    //               </X.Text>
-                    //           </View>
-                    //           <View style={ Styles.homeBodyStatsRow }>
-                    //               <View style={ Styles.homeBodyStat }>
-                    //                   <X.Text
-                    //                       color='white'
-                    //                       size='medium'
-                    //                       weight='semibold'
-                    //                       style={ Styles.homeBodyStatNumber }>
-                    //                       { hasDeviceStats ? formatCommas(deviceStats.all.routes) : '0' }
-                    //                   </X.Text>
-                    //                   <X.Text
-                    //                       color='lightGrey700'
-                    //                       size='tiny'
-                    //                       style={ Styles.homeBodyStatLabel }>
-                    //                       DRIVES
-                    //                   </X.Text>
-                    //               </View>
-                    //               <View style={ Styles.homeBodyStat }>
-                    //                   <X.Text
-                    //                       color='white'
-                    //                       size='medium'
-                    //                       weight='semibold'
-                    //                       style={ Styles.homeBodyStatNumber }>
-                    //                       { hasDeviceStats ? formatCommas(Math.floor(
-                    //                             isMetric ? mToKm(deviceStats.all.distance): deviceStats.all.distance
-                    //                         )) : '0' }
-                    //                   </X.Text>
-                    //                   <X.Text
-                    //                       color='lightGrey700'
-                    //                       size='tiny'
-                    //                       style={ Styles.homeBodyStatLabel }>
-                    //                       { isMetric ? 'KM' : 'MILES' }
-                    //                   </X.Text>
-                    //               </View>
-                    //               <View style={ Styles.homeBodyStat }>
-                    //                   <X.Text
-                    //                       color='white'
-                    //                       size='medium'
-                    //                       weight='semibold'
-                    //                       style={ Styles.homeBodyStatNumber }>
-                    //                       { hasDeviceStats ? formatCommas(Math.floor(deviceStats.all.minutes / 60)) : '0' }
-                    //                   </X.Text>
-                    //                   <X.Text
-                    //                       color='lightGrey700'
-                    //                       size='tiny'
-                    //                       style={ Styles.homeBodyStatLabel }>
-                    //                       HOURS
-                    //                   </X.Text>
-                    //               </View>
-                    //           </View>
-                    //       </View>
-                    //       { isPaired && (hasPrime || !isAmerica) ? (
-                    //           <View style={ Styles.homeBodyAccount }>
-                    //               <View style={ Styles.homeBodyAccountPoints }>
-                    //                   <X.Text
-                    //                       color='white'
-                    //                       size='big'
-                    //                       weight='semibold'
-                    //                       style={ Styles.homeBodyAccountPointsNumber }>
-                    //                       { typeof(commaPoints) !== 'undefined' ? (
-                    //                         formatCommas(commaPoints)
-                    //                       ) : '--' }
-                    //                   </X.Text>
-                    //                   <X.Text
-                    //                       color='lightGrey700'
-                    //                       size='tiny'
-                    //                       style={ Styles.homeBodyAccountPointsLabel }>
-                    //                       COMMA POINTS
-                    //                   </X.Text>
-                    //               </View>
-                    //               <View style={ Styles.homeBodyAccountDetails }>
-                    //                   { username !== null ? (
-                    //                       <X.Text
-                    //                           color='white'
-                    //                           size='small'
-                    //                           weight='semibold'
-                    //                           style={ Styles.homeBodyAccountDetailsName }>
-                    //                           @{ username }
-                    //                       </X.Text>
-                    //                   ) : null }
-                    //               </View>
-                    //           </View>
-                    //       ) : isPaired ? (
-                    //           <View style={ [Styles.homeBodyAccount, Styles.homeBodyAccountDark] }>
-                    //               <View style={ Styles.homeBodyAccountUpgrade }>
-                    //                   <X.Text
-                    //                       color='white'
-                    //                       size='medium'
-                    //                       weight='semibold'
-                    //                       style={ Styles.homeBodyAccountUpgradeTitle }>
-                    //                       Upgrade Now
-                    //                   </X.Text>
-                    //                   <X.Text
-                    //                       color='white'
-                    //                       size='tiny'
-                    //                       weight='light'
-                    //                       style={ Styles.homeBodyAccountUpgradeContext }>
-                    //                       Become a comma prime member in the comma app and get premium features!
-                    //                   </X.Text>
-                    //                   <View style={ Styles.homeBodyAccountUpgradeFeatures }>
-                    //                       <View style={ Styles.homeBodyAccountUpgradeFeature }>
-                    //                           <X.Image
-                    //                               isFlex={ false }
-                    //                               style={ Styles.homeBodyAccountUpgradeIcon }
-                    //                               source={ require('../../img/icon_checkmark.png') } />
-                    //                           <X.Text
-                    //                               color='white'
-                    //                               size='tiny'
-                    //                               weight='semibold'>
-                    //                               Remote Access
-                    //                           </X.Text>
-                    //                       </View>
-                    //                       <View style={ Styles.homeBodyAccountUpgradeFeature }>
-                    //                           <X.Image
-                    //                               isFlex={ false }
-                    //                               style={ Styles.homeBodyAccountUpgradeIcon }
-                    //                               source={ require('../../img/icon_checkmark.png') } />
-                    //                           <X.Text
-                    //                               color='white'
-                    //                               size='tiny'
-                    //                               weight='semibold'>
-                    //                               1 year of storage
-                    //                           </X.Text>
-                    //                       </View>
-                    //                       <View style={ Styles.homeBodyAccountUpgradeFeature }>
-                    //                           <X.Image
-                    //                               isFlex={ false }
-                    //                               style={ Styles.homeBodyAccountUpgradeIcon }
-                    //                               source={ require('../../img/icon_checkmark.png') } />
-                    //                           <X.Text
-                    //                               color='white'
-                    //                               size='tiny'
-                    //                               weight='semibold'>
-                    //                               Developer perks
-                    //                           </X.Text>
-                    //                       </View>
-                    //                   </View>
-                    //               </View>
-                    //           </View>
-                    //       ) : (
-                    //           <View style={ Styles.homeBodyAccount }>
-                    //               <X.Button
-                    //                   color='transparent'
-                    //                   size='full'
-                    //                   onPress={ this.handleFinishPairingPressed }>
-                    //                   <X.Gradient
-                    //                       colors={ HOME_BUTTON_GRADIENT }
-                    //                       style={ Styles.homeBodyAccountPairButton }>
-                    //                       <View style={ Styles.homeBodyAccountPairButtonHeader }>
-                    //                           <X.Text
-                    //                               color='white'
-                    //                               size='medium'
-                    //                               weight='semibold'>
-                    //                               Finish Setup
-                    //                           </X.Text>
-                    //                           <X.Image
-                    //                               isFlex={ false }
-                    //                               style={ Styles.homeBodyAccountPairButtonIcon }
-                    //                               source={ require('../../img/icon_chevron_right.png') } />
-                    //                       </View>
-                    //                       <X.Text
-                    //                           color='white'
-                    //                           size='tiny'
-                    //                           weight='light'
-                    //                           style={ Styles.homeBodyAccountPairButtonContext }>
-                    //                           Pair your comma account with comma connect
-                    //                       </X.Text>
-                    //                   </X.Gradient>
-                    //               </X.Button>
-                    //           </View>
-                    //       ) }
-                    //   </View>
-                    )}
+                    ) : /*(
+                      <View style={ homeBodyStyles }>
+                          <View style={ [Styles.homeBodyStats, !isPaired && Styles.homeBodyStatsUnpaired ] }>
+                              <View style={ Styles.homeBodyStatsHeader }>
+                                  <X.Text
+                                      color='white'
+                                      size='tiny'
+                                      weight='semibold'>
+                                      PAST WEEK
+                                  </X.Text>
+                              </View>
+                              <View style={ Styles.homeBodyStatsRow }>
+                                  <View style={ Styles.homeBodyStat }>
+                                      <X.Text
+                                          color='white'
+                                          size='big'
+                                          weight='semibold'
+                                          style={ Styles.homeBodyStatNumber }>
+                                          { hasDeviceStats ? formatCommas(deviceStats.week.routes) : '0' }
+                                      </X.Text>
+                                      <X.Text
+                                          color='lightGrey700'
+                                          size='tiny'
+                                          style={ Styles.homeBodyStatLabel }>
+                                          DRIVES
+                                      </X.Text>
+                                  </View>
+                                  <View style={ Styles.homeBodyStat }>
+                                      <X.Text
+                                          color='white'
+                                          size='big'
+                                          weight='semibold'
+                                          style={ Styles.homeBodyStatNumber }>
+                                          { hasDeviceStats ? formatCommas(Math.floor(
+                                                isMetric ? mToKm(deviceStats.week.distance): deviceStats.week.distance
+                                            )) : '0' }
+                                      </X.Text>
+                                      <X.Text
+                                          color='lightGrey700'
+                                          size='tiny'
+                                          style={ Styles.homeBodyStatLabel }>
+                                          { isMetric ? 'KM' : 'MILES' }
+                                      </X.Text>
+                                  </View>
+                                  <View style={ Styles.homeBodyStat }>
+                                      <X.Text
+                                          color='white'
+                                          size='big'
+                                          weight='semibold'
+                                          style={ Styles.homeBodyStatNumber }>
+                                          { hasDeviceStats ? formatCommas(Math.floor(deviceStats.week.minutes / 60)) : '0' }
+                                      </X.Text>
+                                      <X.Text
+                                          color='lightGrey700'
+                                          size='tiny'
+                                          style={ Styles.homeBodyStatLabel }>
+                                          HOURS
+                                      </X.Text>
+                                  </View>
+                              </View>
+                              <X.Line
+                                  color='light'
+                                  spacing='none' />
+                              <View style={ Styles.homeBodyStatsHeader }>
+                                  <X.Text
+                                      color='white'
+                                      size='tiny'
+                                      weight='semibold'>
+                                      ALL TIME
+                                  </X.Text>
+                              </View>
+                              <View style={ Styles.homeBodyStatsRow }>
+                                  <View style={ Styles.homeBodyStat }>
+                                      <X.Text
+                                          color='white'
+                                          size='medium'
+                                          weight='semibold'
+                                          style={ Styles.homeBodyStatNumber }>
+                                          { hasDeviceStats ? formatCommas(deviceStats.all.routes) : '0' }
+                                      </X.Text>
+                                      <X.Text
+                                          color='lightGrey700'
+                                          size='tiny'
+                                          style={ Styles.homeBodyStatLabel }>
+                                          DRIVES
+                                      </X.Text>
+                                  </View>
+                                  <View style={ Styles.homeBodyStat }>
+                                      <X.Text
+                                          color='white'
+                                          size='medium'
+                                          weight='semibold'
+                                          style={ Styles.homeBodyStatNumber }>
+                                          { hasDeviceStats ? formatCommas(Math.floor(
+                                                isMetric ? mToKm(deviceStats.all.distance): deviceStats.all.distance
+                                            )) : '0' }
+                                      </X.Text>
+                                      <X.Text
+                                          color='lightGrey700'
+                                          size='tiny'
+                                          style={ Styles.homeBodyStatLabel }>
+                                          { isMetric ? 'KM' : 'MILES' }
+                                      </X.Text>
+                                  </View>
+                                  <View style={ Styles.homeBodyStat }>
+                                      <X.Text
+                                          color='white'
+                                          size='medium'
+                                          weight='semibold'
+                                          style={ Styles.homeBodyStatNumber }>
+                                          { hasDeviceStats ? formatCommas(Math.floor(deviceStats.all.minutes / 60)) : '0' }
+                                      </X.Text>
+                                      <X.Text
+                                          color='lightGrey700'
+                                          size='tiny'
+                                          style={ Styles.homeBodyStatLabel }>
+                                          HOURS
+                                      </X.Text>
+                                  </View>
+                              </View>
+                          </View>
+                          { isPaired && (hasPrime || !isAmerica) ? (
+                              <View style={ Styles.homeBodyAccount }>
+                                  <View style={ Styles.homeBodyAccountPoints }>
+                                      <X.Text
+                                          color='white'
+                                          size='big'
+                                          weight='semibold'
+                                          style={ Styles.homeBodyAccountPointsNumber }>
+                                          { typeof(commaPoints) !== 'undefined' ? (
+                                            formatCommas(commaPoints)
+                                          ) : '--' }
+                                      </X.Text>
+                                      <X.Text
+                                          color='lightGrey700'
+                                          size='tiny'
+                                          style={ Styles.homeBodyAccountPointsLabel }>
+                                          COMMA POINTS
+                                      </X.Text>
+                                  </View>
+                                  <View style={ Styles.homeBodyAccountDetails }>
+                                      { username !== null ? (
+                                          <X.Text
+                                              color='white'
+                                              size='small'
+                                              weight='semibold'
+                                              style={ Styles.homeBodyAccountDetailsName }>
+                                              @{ username }
+                                          </X.Text>
+                                      ) : null }
+                                  </View>
+                              </View>
+                          ) : isPaired ? (
+                              <View style={ [Styles.homeBodyAccount, Styles.homeBodyAccountDark] }>
+                                  <View style={ Styles.homeBodyAccountUpgrade }>
+                                      <X.Text
+                                          color='white'
+                                          size='medium'
+                                          weight='semibold'
+                                          style={ Styles.homeBodyAccountUpgradeTitle }>
+                                          Upgrade Now
+                                      </X.Text>
+                                      <X.Text
+                                          color='white'
+                                          size='tiny'
+                                          weight='light'
+                                          style={ Styles.homeBodyAccountUpgradeContext }>
+                                          Become a comma prime member in the comma app and get premium features!
+                                      </X.Text>
+                                      <View style={ Styles.homeBodyAccountUpgradeFeatures }>
+                                          <View style={ Styles.homeBodyAccountUpgradeFeature }>
+                                              <X.Image
+                                                  isFlex={ false }
+                                                  style={ Styles.homeBodyAccountUpgradeIcon }
+                                                  source={ require('../../img/icon_checkmark.png') } />
+                                              <X.Text
+                                                  color='white'
+                                                  size='tiny'
+                                                  weight='semibold'>
+                                                  Remote Access
+                                              </X.Text>
+                                          </View>
+                                          <View style={ Styles.homeBodyAccountUpgradeFeature }>
+                                              <X.Image
+                                                  isFlex={ false }
+                                                  style={ Styles.homeBodyAccountUpgradeIcon }
+                                                  source={ require('../../img/icon_checkmark.png') } />
+                                              <X.Text
+                                                  color='white'
+                                                  size='tiny'
+                                                  weight='semibold'>
+                                                  1 year of storage
+                                              </X.Text>
+                                          </View>
+                                          <View style={ Styles.homeBodyAccountUpgradeFeature }>
+                                              <X.Image
+                                                  isFlex={ false }
+                                                  style={ Styles.homeBodyAccountUpgradeIcon }
+                                                  source={ require('../../img/icon_checkmark.png') } />
+                                              <X.Text
+                                                  color='white'
+                                                  size='tiny'
+                                                  weight='semibold'>
+                                                  Developer perks
+                                              </X.Text>
+                                          </View>
+                                      </View>
+                                  </View>
+                              </View>
+                          ) : (
+                              <View style={ Styles.homeBodyAccount }>
+                                  <X.Button
+                                      color='transparent'
+                                      size='full'
+                                      onPress={ this.handleFinishPairingPressed }>
+                                      <X.Gradient
+                                          colors={ HOME_BUTTON_GRADIENT }
+                                          style={ Styles.homeBodyAccountPairButton }>
+                                          <View style={ Styles.homeBodyAccountPairButtonHeader }>
+                                              <X.Text
+                                                  color='white'
+                                                  size='medium'
+                                                  weight='semibold'>
+                                                  Finish Setup
+                                              </X.Text>
+                                              <X.Image
+                                                  isFlex={ false }
+                                                  style={ Styles.homeBodyAccountPairButtonIcon }
+                                                  source={ require('../../img/icon_chevron_right.png') } />
+                                          </View>
+                                          <X.Text
+                                              color='white'
+                                              size='tiny'
+                                              weight='light'
+                                              style={ Styles.homeBodyAccountPairButtonContext }>
+                                              Pair your comma account with comma connect
+                                          </X.Text>
+                                      </X.Gradient>
+                                  </X.Button>
+                              </View>
+                          ) }
+                      </View>
+                    )}*/
+                    null }
                 </View>
             </X.Gradient>
         )

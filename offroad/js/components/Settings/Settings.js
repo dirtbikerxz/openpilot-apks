@@ -188,12 +188,12 @@ class Settings extends Component {
             connectivity = simState.networkType;
         }
         const settingsMenuItems = [
-            {
-                icon: Icons.user,
-                title: 'Account',
-                context: isPaired ? 'Paired' : 'Unpaired',
-                route: SettingsRoutes.ACCOUNT,
-            },
+            // {
+            //     icon: Icons.user,
+            //     title: 'Account',
+            //     context: isPaired ? 'Paired' : 'Unpaired',
+            //     route: SettingsRoutes.ACCOUNT,
+            // },
             {
                 icon: Icons.eon,
                 title: 'Device',
@@ -208,7 +208,7 @@ class Settings extends Component {
             },
             {
                 icon: Icons.developer,
-                title: 'Developer',
+                title: 'SSH & Git',
                 context: `${ software } v${ version.split('-')[0] }`,
                 route: SettingsRoutes.DEVELOPER,
             },
@@ -216,7 +216,7 @@ class Settings extends Component {
         return settingsMenuItems.map((item, idx) => {
             const cellButtonStyle = [
               Styles.settingsMenuItem,
-              idx == 3 ? Styles.settingsMenuItemBorderless : null,
+              idx == 2 ? Styles.settingsMenuItemBorderless : null,
             ]
             return (
                 <View key={ idx } style={ cellButtonStyle }>
@@ -225,9 +225,9 @@ class Settings extends Component {
                         size='full'
                         style={ Styles.settingsMenuItemButton }
                         onPress={ () => this.handleNavigatedFromMenu(item.route) }>
-                        <X.Image
+                        {/* <X.Image
                             source={ item.icon }
-                            style={ Styles.settingsMenuItemIcon } />
+                            style={ Styles.settingsMenuItemIcon } /> */}
                         <X.Text
                             color='white'
                             size='small'
@@ -270,7 +270,7 @@ class Settings extends Component {
                         color='ghost'
                         size='small'
                         onPress={ () => this.handlePressedBack() }>
-                        {'<  Settings'}
+                        {'<  Back'}
                     </X.Button>
                 </View>
                 <ScrollView
@@ -283,35 +283,35 @@ class Settings extends Component {
                         { !parseInt(isPassive) ? (
                             <X.TableCell
                                 type='switch'
-                                title='Enable openpilot'
+                                title='Enable Lane Centering'
                                 value={ !!parseInt(openpilotEnabled) }
                                 iconSource={ Icons.openpilot }
-                                description='Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off.'
-                                isExpanded={ expandedCell == 'openpilot_enabled' }
+                                //description='Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off.'
+                                //isExpanded={ expandedCell == 'openpilot_enabled' }
                                 handleExpanded={ () => this.handleExpanded('openpilot_enabled') }
                                 handleChanged={ this.props.setOpenpilotEnabled } />
                         ) : null }
                         { !parseInt(isPassive) ? (
                             <X.TableCell
                                 type='switch'
-                                title='Enable Lane Change Assist'
+                                title='Lane Change Assist'
                                 value={ !!parseInt(laneChangeEnabled) }
                                 iconSource={ Icons.openpilot }
-                                description='Perform assisted lane changes with openpilot by checking your surroundings for safety, activating the turn signal and gently nudging the steering wheel towards your desired lane. openpilot is not capable of checking if a lane change is safe. You must continuously observe your surroundings to use this feature.'
-                                isExpanded={ expandedCell == 'lanechange_enabled' }
+                                //description='Perform assisted lane changes with openpilot by checking your surroundings for safety, activating the turn signal and gently nudging the steering wheel towards your desired lane. openpilot is not capable of checking if a lane change is safe. You must continuously observe your surroundings to use this feature.'
+                                //isExpanded={ expandedCell == 'lanechange_enabled' }
                                 handleExpanded={ () => this.handleExpanded('lanechange_enabled') }
                                 handleChanged={ this.props.setLaneChangeEnabled } />
                         ) : null }
                         <X.TableCell
                             type='switch'
-                            title='Enable Lane Departure Warnings'
+                            title='Lane Departure Warnings'
                             value={ !!parseInt(isLaneDepartureWarningEnabled) }
                             iconSource={ Icons.warning }
-                            description='Receive alerts to steer back into the lane when your vehicle drifts over a detected lane line without a turn signal activated while driving over 31mph (50kph).'
-                            isExpanded={ expandedCell == 'ldw' }
+                            //description='Receive alerts to steer back into the lane when your vehicle drifts over a detected lane line without a turn signal activated while driving over 31mph (50kph).'
+                            //isExpanded={ expandedCell == 'ldw' }
                             handleExpanded={ () => this.handleExpanded('ldw') }
                             handleChanged={ this.props.setLaneDepartureWarningEnabled } />
-                        <X.TableCell
+                        {/* <X.TableCell
                             type='switch'
                             title='Record and Upload Driver Camera'
                             value={ !!parseInt(recordFront) }
@@ -328,7 +328,7 @@ class Settings extends Component {
                             description='Display speed in km/h instead of mp/h.'
                             isExpanded={ expandedCell == 'metric' }
                             handleExpanded={ () => this.handleExpanded('metric') }
-                            handleChanged={ this.props.setMetric } />
+                            handleChanged={ this.props.setMetric } /> */}
                       </X.Table>
                       {/*
                       <X.Table color='darkBlue'>
@@ -378,13 +378,13 @@ class Settings extends Component {
                             handleChanged={ this.props.setLimitSetSpeed } />
                     </X.Table>
                     */}
-                    <X.Table color='darkBlue'>
+                    {/* <X.Table color='darkBlue'>
                         <X.Button
                             color='settingsDefault'
                             onPress={ () => this.props.openTrainingGuide() }>
                             Review Training Guide
                         </X.Button>
-                    </X.Table>
+                    </X.Table> */}
                 </ScrollView>
             </View>
         )
@@ -464,7 +464,7 @@ class Settings extends Component {
                         color='ghost'
                         size='small'
                         onPress={ () => this.handlePressedBack() }>
-                        {'<  Device Settings'}
+                        {'<  Back'}
                     </X.Button>
                 </View>
                 <ScrollView
@@ -475,7 +475,7 @@ class Settings extends Component {
                             type='custom'
                             title='Camera Calibration'
                             iconSource={ Icons.calibration }
-                            description='The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when the device reports an invalid calibration alert or when the device is remounted in a different position.'
+                            //description='The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when the device reports an invalid calibration alert or when the device is remounted in a different position.'
                             isExpanded={ expandedCell == 'calibration' }
                             handleExpanded={ () => this.handleExpanded('calibration') }>
                             <X.Button
@@ -488,7 +488,7 @@ class Settings extends Component {
                         </X.TableCell>
                     </X.Table>
                     <X.Table>
-                        <X.TableCell
+                        {/* <X.TableCell
                             title='Paired'
                             value={ isPaired ? 'Yes' : 'No' } />
                         <X.TableCell
@@ -496,7 +496,7 @@ class Settings extends Component {
                             value={ dongleId } />
                         <X.TableCell
                             title='Serial Number'
-                            value={ serialNumber } />
+                            value={ serialNumber } /> */}
                         <X.TableCell
                             title='Free Storage'
                             value={ parseInt(freeSpace) + '%' }
@@ -535,7 +535,7 @@ class Settings extends Component {
                         color='ghost'
                         size='small'
                         onPress={ () => this.handlePressedBack() }>
-                        {'<  Network Settings'}
+                        {'<  Back'}
                     </X.Button>
                 </View>
                 <ScrollView
@@ -584,7 +584,7 @@ class Settings extends Component {
                         color='ghost'
                         size='small'
                         onPress={ () => this.handlePressedBack() }>
-                        {'<  Developer Settings'}
+                        {'<  Back'}
                     </X.Button>
                 </View>
                 <ScrollView
@@ -593,17 +593,17 @@ class Settings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Enable Community Features'
+                            title='Enable Ports'
                             value={ !!parseInt(communityFeatures) }
                             iconSource={ Icons.developer }
-                            descriptionExtra={
-                              <X.Text color='white' size='tiny'>
-                                  Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features:{'\n'}
-                                  * GM car port{'\n'}
-                                  * Toyota with DSU unplugged{'\n'}
-                                  * Pedal interceptor{'\n'}
-                              </X.Text>
-                            }
+                            // descriptionExtra={
+                            //   <X.Text color='white' size='tiny'>
+                            //       Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features:{'\n'}
+                            //       * GM car port{'\n'}
+                            //       * Toyota with DSU unplugged{'\n'}
+                            //       * Pedal interceptor{'\n'}
+                            //   </X.Text>
+                            // }
                             isExpanded={ expandedCell == 'communityFeatures' }
                             handleExpanded={ () => this.handleExpanded('communityFeatures') }
                             handleChanged={ this.props.setCommunityFeatures } />
@@ -618,7 +618,7 @@ class Settings extends Component {
                             handleChanged={ this.props.setSshEnabled } />
                         <X.TableCell
                             iconSource={ Icons.developer }
-                            title='Authorized SSH Keys'
+                            title='SSH Keys'
                             descriptionExtra={ this.renderSshInput() }
                             isExpanded={ expandedCell === 'ssh_keys' }
                             handleExpanded={ this.toggleExpandGithubInput }
@@ -633,13 +633,13 @@ class Settings extends Component {
                         </X.TableCell>
                     </X.Table>
                     <X.Table spacing='none'>
-                        <X.TableCell
+                        {/* <X.TableCell
                             title='Version'
-                            value={ `${ software } v${ version }` } />
+                            value={ `${ software } v${ version }` } /> */}
                         <X.TableCell
-                            title='Git Branch'
+                            title='Branch'
                             value={ gitBranch } />
-                        <X.TableCell
+                        {/* <X.TableCell
                             title='Git Revision'
                             value={ gitRevision.slice(0, 12) }
                             valueTextSize='tiny' />
@@ -650,16 +650,16 @@ class Settings extends Component {
                         <X.TableCell
                             title='Panda Dongle ID'
                             value={ (pandaDongleId != null && pandaDongleId != "unprovisioned") ? pandaDongleId : 'N/A' }
-                            valueTextSize='tiny' />
+                            valueTextSize='tiny' /> */}
                     </X.Table>
-                    <X.Table color='darkBlue' padding='big'>
+                    {/* <X.Table color='darkBlue' padding='big'>
                         <X.Button
                             color='settingsDefault'
                             size='small'
                             onPress={ this.props.uninstall }>
                             { `Uninstall ${ software }` }
                         </X.Button>
-                    </X.Table>
+                    </X.Table> */}
                 </ScrollView>
             </View>
         )
@@ -671,7 +671,7 @@ class Settings extends Component {
 
         return (
             <View>
-                <X.Text color='white' size='tiny'>
+                {/* <X.Text color='white' size='tiny'>
                     WARNING:
                     {'\n'}
                     This grants SSH access to all public keys in your GitHub settings.
@@ -682,7 +682,7 @@ class Settings extends Component {
                     {'\n'}
                     A comma employee will never ask you to add their GitHub.
                     {'\n'}
-                </X.Text>
+                </X.Text> */}
                 <View style={ Styles.githubUsernameInputContainer }>
                     <X.Text
                         color='white'

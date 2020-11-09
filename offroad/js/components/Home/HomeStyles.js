@@ -170,6 +170,11 @@ export default StyleSheet.create({
         opacity: 0.5,
         width: 14,
     },
+    homeBodyMalibu: {
+        height: '100%',
+        width: '100%',
+        textAlign: 'center',
+    },
     homeBodyAccountPairButtonContext: {
         textAlign: 'center',
     },

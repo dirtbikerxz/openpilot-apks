@@ -281,7 +281,15 @@ class Home extends Component {
                                 </X.Text>
                             </View>
                         </View>
-                    ) : /*(
+                    ) : (
+                        <X.Image
+                            isFlex={ false }
+                            style={ Styles.homeBodyMalibu }
+                            source={ require('../../img/icon_malibu.png') } />
+                        )
+                    }
+                    
+                    {/* (
                       <View style={ homeBodyStyles }>
                           <View style={ [Styles.homeBodyStats, !isPaired && Styles.homeBodyStatsUnpaired ] }>
                               <View style={ Styles.homeBodyStatsHeader }>
@@ -523,8 +531,7 @@ class Home extends Component {
                               </View>
                           ) }
                       </View>
-                    )}*/
-                    null }
+                    )} */}
                 </View>
             </X.Gradient>
         )

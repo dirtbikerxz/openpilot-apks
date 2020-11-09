@@ -181,11 +181,11 @@
         android:orientation="vertical">
         <ImageView
             android:id="@+id/nav_icon_home"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_gravity="center"
             android:layout_marginBottom="15dp"
-            android:alpha="0.65"
+            android:alpha="1"
             android:src="@drawable/icon_comma" />
     </LinearLayout>
 </LinearLayout>

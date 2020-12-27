@@ -28,7 +28,7 @@ export const StackNavigator = RNStackNavigator({
     Settings: { screen: Settings },
     SettingsWifi: { screen: SettingsWifi },
     UpdatePrompt: { screen: UpdatePrompt },
-    DriveRating: { screen: DriveRating },
+    DriveRating: { screen: Home },
 }, {
     transitionConfig : () => ({
         transitionSpec: {

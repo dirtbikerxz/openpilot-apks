@@ -143,7 +143,8 @@ class Home extends Component {
         } = this.props;
 
         const softwareName = !!parseInt(params.Passive) ? 'dashcam' : 'openpilot';
-        const softwareString = `${ softwareName } v${ params.Version }`;
+        const softwareString = `${ params.Version }`;
+        // const softwareString = `${ softwareName } v${ params.Version }`;
         const isAmerica = this.checkIsInAmerica();
         const hasDeviceStats = typeof(deviceStats.all) !== 'undefined';
         const isMetric = !!parseInt(params.IsMetric);
@@ -265,27 +266,19 @@ class Home extends Component {
                             </ScrollView>
                         </View>
                     ) : !isConnected ? (
-                        <View style={ homeBodyStyles }>
-                            <View style={ Styles.homeBodyDisconnected }>
-                                <X.Text
-                                    color='white'
-                                    size='jumbo'
-                                    weight='semibold'>
-                                    No Network Connection
-                                </X.Text>
-                                <X.Text
-                                    color='lightGrey700'
-                                    size='medium'
-                                    style={ Styles.homeBodyDisconnectedContext }>
-                                    Connect to a WiFi or cellular network to upload and review your drives.
-                                </X.Text>
-                            </View>
-                        </View>
+                        <X.Text
+                            color='white'
+                            size='jumbo'
+                            style={ Styles.homeBodyDisconnectedContext }>
+                            Not Connected
+                        </X.Text>
                     ) : (
-                        <X.Image
-                            isFlex={ false }
-                            style={ Styles.homeBodyMalibu }
-                            source={ require('../../img/icon_malibu.png') } />
+                        <X.Text
+                            color='white'
+                            size='jumbo'
+                            style={ Styles.homeBodyDisconnectedContext }>
+                            Connected
+                        </X.Text>
                         )
                     }
                     

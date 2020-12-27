@@ -209,7 +209,8 @@ class Settings extends Component {
             {
                 icon: Icons.developer,
                 title: 'SSH & Git',
-                context: `${ software } v${ version.split('-')[0] }`,
+                context: `${ version }`,
+                // context: `${ software } v${ version.split('-')[0] }`,
                 route: SettingsRoutes.DEVELOPER,
             },
         ];
@@ -276,10 +277,10 @@ class Settings extends Component {
                 <ScrollView
                     ref="settingsScrollView"
                     style={ Styles.settingsWindow }>
-                    <X.Table direction='row' color='darkBlue'>
+                    <X.Table direction='row' color="#181818">
                         { this.renderSettingsMenu() }
                     </X.Table>
-                    <X.Table color='darkBlue'>
+                    <X.Table color="#181818">
                         { !parseInt(isPassive) ? (
                             <X.TableCell
                                 type='switch'
@@ -331,7 +332,7 @@ class Settings extends Component {
                             handleChanged={ this.props.setMetric } /> */}
                       </X.Table>
                       {/*
-                      <X.Table color='darkBlue'>
+                      <X.Table color="#181818">
                         <X.TableCell
                             type='custom'
                             title='Add Speed Limit Offset'
@@ -378,7 +379,7 @@ class Settings extends Component {
                             handleChanged={ this.props.setLimitSetSpeed } />
                     </X.Table>
                     */}
-                    {/* <X.Table color='darkBlue'>
+                    {/* <X.Table color="#181818">
                         <X.Button
                             color='settingsDefault'
                             onPress={ () => this.props.openTrainingGuide() }>
@@ -426,7 +427,7 @@ class Settings extends Component {
                             </X.Text>
                         </X.Table>
                         { isPaired ? null : (
-                            <X.Table color='darkBlue' padding='big'>
+                            <X.Table color="#181818" padding='big'>
                                 <X.Button
                                     color='settingsDefault'
                                     size='small'
@@ -470,7 +471,7 @@ class Settings extends Component {
                 <ScrollView
                     ref="settingsScrollView"
                     style={ Styles.settingsWindow }>
-                    <X.Table color='darkBlue'>
+                    <X.Table color="#181818">
                         <X.TableCell
                             type='custom'
                             title='Camera Calibration'
@@ -506,7 +507,7 @@ class Settings extends Component {
                             value={ txSpeedKbps + ' kbps' }
                              />
                     </X.Table>
-                    <X.Table color='darkBlue'>
+                    <X.Table color="#181818">
                         <X.Button
                             size='small'
                             color='settingsDefault'
@@ -542,7 +543,7 @@ class Settings extends Component {
                     ref="settingsScrollView"
                     style={ Styles.settingsWindow }>
                     <X.Line color='transparent' spacing='tiny' />
-                    <X.Table spacing='big' color='darkBlue'>
+                    <X.Table spacing='big' color="#181818">
                         <X.Button
                             size='small'
                             color='settingsDefault'
@@ -590,7 +591,7 @@ class Settings extends Component {
                 <ScrollView
                     ref="settingsScrollView"
                     style={ Styles.settingsWindow }>
-                    <X.Table color='darkBlue'>
+                    <X.Table color="#181818">
                         <X.TableCell
                             type='switch'
                             title='Enable Ports'
@@ -652,7 +653,7 @@ class Settings extends Component {
                             value={ (pandaDongleId != null && pandaDongleId != "unprovisioned") ? pandaDongleId : 'N/A' }
                             valueTextSize='tiny' /> */}
                     </X.Table>
-                    {/* <X.Table color='darkBlue' padding='big'>
+                    {/* <X.Table color="#181818" padding='big'>
                         <X.Button
                             color='settingsDefault'
                             size='small'
@@ -782,7 +783,7 @@ class Settings extends Component {
 
     render() {
         return (
-            <X.Gradient color='dark_blue'>
+            <X.Gradient color='flat_blue'>
                 { this.renderSettingsByRoute() }
             </X.Gradient>
         )

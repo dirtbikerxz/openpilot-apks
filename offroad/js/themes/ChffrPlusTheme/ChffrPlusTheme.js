@@ -121,8 +121,8 @@ export let ChffrPlusTheme = {
                 'rgb(3, 4, 4)',
             ],
             flat_blue: [
-                'rgb(7, 35, 57)',
-                'rgb(7, 35, 57)',
+                'rgb(34, 34, 34)',
+                'rgb(34, 34, 34)',
             ],
         },
     },

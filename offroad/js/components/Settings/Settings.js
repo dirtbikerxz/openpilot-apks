@@ -38,6 +38,7 @@ const SettingsRoutes = {
 
 const Icons = {
     user: require('../../img/icon_user.png'),
+    clearDay: require('../../img/illustration_weather_clear_day.png'),
     developer: require('../../img/icon_shell.png'),
     warning: require('../../img/icon_warning.png'),
     metric: require('../../img/icon_metric.png'),
@@ -305,6 +306,15 @@ class Settings extends Component {
                         ) : null }
                         <X.TableCell
                             type='switch'
+                            title='Auto Brightness'
+                            value={ !!parseInt(recordFront) }
+                            iconSource={ Icons.clearDay }
+                            // description='Upload data from the driver facing camera and help improve the Driver Monitoring algorithm.'
+                            // isExpanded={ expandedCell == 'record_front' }
+                            handleExpanded={ () => this.handleExpanded('record_front') }
+                            handleChanged={ this.props.setRecordFront } />
+                        <X.TableCell
+                            type='switch'
                             title='Lane Departure Warnings'
                             value={ !!parseInt(isLaneDepartureWarningEnabled) }
                             iconSource={ Icons.warning }
@@ -313,15 +323,6 @@ class Settings extends Component {
                             handleExpanded={ () => this.handleExpanded('ldw') }
                             handleChanged={ this.props.setLaneDepartureWarningEnabled } />
                         {/* <X.TableCell
-                            type='switch'
-                            title='Record and Upload Driver Camera'
-                            value={ !!parseInt(recordFront) }
-                            iconSource={ Icons.network }
-                            description='Upload data from the driver facing camera and help improve the Driver Monitoring algorithm.'
-                            isExpanded={ expandedCell == 'record_front' }
-                            handleExpanded={ () => this.handleExpanded('record_front') }
-                            handleChanged={ this.props.setRecordFront } />
-                        <X.TableCell
                             type='switch'
                             title='Use Metric System'
                             value={ !!parseInt(isMetric) }
